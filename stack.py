@@ -1,16 +1,50 @@
+# Stack Implementation using List
+# LIFO - Last In, First Out
+
 stack = []
 
-# Push
-stack.append(10)
-stack.append(20)
-stack.append(30)
 
-print("Stack:", stack)
+# Push Operation
+def push(value):
+    stack.append(value)
+    print(value, "pushed into stack")
 
-# Peek
-print("Top element:", stack[-1])
 
-# Pop
-print("Popped:", stack.pop())
+# Pop Operation
+def pop():
+    if len(stack) == 0:
+        print("Stack Underflow")
+    else:
+        print(stack.pop(), "popped from stack")
 
-print("Stack after pop:", stack)
+
+# Peek Operation
+def peek():
+    if len(stack) == 0:
+        print("Stack is empty")
+    else:
+        print("Top element:", stack[-1])
+
+
+# Display Operation
+def display():
+    if len(stack) == 0:
+        print("Stack is empty")
+    else:
+        print("Stack:", stack)
+
+
+# Operations
+push(10)
+push(20)
+push(30)
+
+display()
+
+peek()
+
+pop()
+
+display()
+
+peek()
